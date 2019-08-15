@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Post
 
 
 posts = [
@@ -21,7 +21,7 @@ posts = [
 def home(request):
     
     context = {
-        'posts': posts
+      'posts': Post.objects.all()
     }
     
     return render(request, 'yelp/home.html', context)
