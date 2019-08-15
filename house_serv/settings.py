@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'yelp'
+    'yelp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
