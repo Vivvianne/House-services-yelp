@@ -24,10 +24,10 @@ def home(request):
         'posts': posts
     }
     
-    return HttpResponse('<h1>Yelp Home</h1>')
+    return render(request, 'yelp/home.html', context)
 
 
 def about(request):
-    return HttpResponse('<h1>Yelp About</h1>')
+    return render(request, 'yelp/about.html', {'title': 'About'})
 
 

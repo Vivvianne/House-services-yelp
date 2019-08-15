@@ -1,0 +1,77 @@
+.navbar {
+    background-color: rgb(195, 175, 138);
+    font-family: fantasy;
+    font-size: 20px;
+}
+
+
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+
+.media-body {
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.content-section {
+    margin-top: 50px;
+    background: #ffffff;
+    padding: 20px 30px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+.article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+  
+.article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+.article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+.account-heading {
+    font-size: 2.5rem;
+  }
+
+@media screen and (min-width: 300px) {
+  body {
+    background-color: white;
+    color:blue;
+  }
+}
+@media screen and (max-width: 560px) {
+    .article-metadata {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        image-rendering: pixelated;
+    }
+}
