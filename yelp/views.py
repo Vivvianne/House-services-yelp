@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
+from .forms import PostCreateForm
 from django.views.generic import CreateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 
 
@@ -28,21 +29,17 @@ class PostDetailView(DetailView):
     
 def post_save(request):
     if request.method =='POST':
-        form = PostCreateForm(request.POST, request.FILES)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            
-            post.save()
-            return redirect('neighbour-home')
+    # u_form = UserUpdateForm(request.POST, instance=request.user)
+        a_form = PostCreateForm(request.POST, request.FILES)
+        if a_form.is_valid():
+            image = a_form.save(commit=False)
+            image.author = request.user
+            # u_form.save()
+            image.save()
+            return redirect('yelp-home')
     else:
-        form = PostCreateForm()
-        
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        form.instance.neighbourhood_id = self.request.neighbourhood
-        return super().form_valid(form)
-    return render(request,'neighbour/post_form.html',{'form':form})
+        a_form = PostCreateForm()
+    return render(request,'yelp/post_form.html',{'form':a_form})
 
 
 def about(request):
