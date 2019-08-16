@@ -1,4 +1,20 @@
-{% extends "yelp/base.html" %}
+{% load static %}
 {% block content %}
-    <h1>About Page</h1>
+    <header>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+            <link rel="stylesheet" type="text/css" href="{% static 'yelp/main.css' %}">
+    </header>
+    <body>
+        <div class = "welcome" style="text-align:center">
+            <div class= "jumbotron" style="background-color: rgb(195, 175, 138);">
+                <h1 style="font-weight: bold;">Welcome To Home Services</h1>
+                <h3>Find someone suitable for your Home</h3>
+                <img src="media/neighbors_meeting.jpg" alt="">
+                <button class="btn btn-outline-info mb-4"><a class="nav-item nav-link" href="{% url 'login' %}">Login</a></button>
+                <button class="btn btn-outline-info mb-4"><a class="nav-item nav-link" href="{% url 'register' %}">Register</a></button>
+            </div>
+        </div>
+    </body>
 {% endblock content %}
